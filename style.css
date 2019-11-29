@@ -5,12 +5,11 @@ body{
   font-family: 'Jomolhari', serif;
 }
 a{
-  color:black;
+  color:darkblue;
   text-decoration: none;
 }
 h1{
   font-family: 'Gaegu', cursive;
-  font-family: 'Jomolhari', serif;
   font-size:45px;
   text-align: center;
   border-bottom:2px solid gray;
@@ -24,6 +23,9 @@ ol{
   width:200px;
   margin:0;
   padding:20px;
+}
+ul{
+  list-style:none;
 }
 #grid{
   display: grid;
@@ -39,7 +41,7 @@ ol{
   #grid{
     display: block;
   }
-  ol{
+  ul{
     border-right:none;
   }
   h1{

@@ -2,10 +2,39 @@
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script>
+      function daynighthandler(self){
+        var target = document.querySelector('body')
+          if(self.value === 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            self.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+               console.log(alist[i]);
+               alist[i].style.color = 'powderblue';
+               i = i + 1;
+              }
+          } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            self.value ='night';
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+             console.log(alist[i]);
+             alist[i].style.color = 'blue';
+             i = i + 1;
+            }
+          }
+      }
+    </script>
     <title>LATIN</title>
     <style>
       a {
-        color:black;
+        color:darkblue;
         text-decoration: none;
       }
       h1 {
@@ -22,6 +51,9 @@
     <p style="margin-top:100px"></p>
     <img src="rio.jpg" width="35%">
     <p style="margin-bottom:100px"></p>
+    <input type="button" value="night" onclick="
+      daynighthandler(this);
+      ">
     </div>
   </body>
 </html>
