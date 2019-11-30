@@ -3,34 +3,31 @@
   <head>
     <meta charset="utf-8">
     <script>
-      function LinksSetColor(color){
-        var alist = document.querySelectorAll('a');
-          var i = 0;
-          while(i < alist.length){
-           alist[i].style.color = color;
-           i = i + 1;
-          }
-      }
-      function BodySetColor(color){
-        document.querySelector('body').style.color = color;
-      }
-      function BodySetBackgroundColor(color){
-        document.querySelector('body').style.backgroundColor = color;
-      }
-      function NightDayHandler(self){
-        var target = document.querySelector('body');
+      function daynighthandler(self){
+        var target = document.querySelector('body')
           if(self.value === 'night'){
-            Body.setBackgroundColor('black');
-            Body.setColor('white');
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
             self.value = 'day';
 
-            Links.setColor('powderblue');
+            var alist = document.querySelectorAll('a');
+              var i = 0;
+              while(i < alist.length){
+               console.log(alist[i]);
+               alist[i].style.color = 'powderblue';
+               i = i + 1;
+              }
           } else {
-            Body.setBackgroundColor('white');
-            Body.setColor('black');
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
             self.value ='night';
-
-            Links.setColor('blue');
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+             console.log(alist[i]);
+             alist[i].style.color = 'blue';
+             i = i + 1;
+            }
           }
       }
     </script>
@@ -49,15 +46,37 @@
       <li><a href="5.html">내가 가고싶은 나라는?</a></li>
       <br>
       <li>
-        <input id="night_day" type="button" value="night" onclick="
-          NightDayHandler(this);
+        <input type="button" value="night" onclick="
+          daynighthandler(this);
           "></li>
       </ul>
     <div id="article">
     <p align="center">
-      <br><h3>1. 볼리비아 유우니사막</h3>
-      <br><h3>2. 페루 마추픽추</h3>
-      <br><h3>3. 쿠바 하바나</h3>
+      <table border="0" bordercolor="skyblue">
+        <thead>
+        <tr bgcolor="powderblue">
+          <td>장소</td><td>특징</td><td>사진</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width:93px;" class="">볼리비아 :<br>우유니사막</td><td>볼리비아에 있는 건조 호수로, 그 넓이가 10,582[1] km²에
+             이른다.<br>
+             이 사막은 3,650m 높이의 안데스 영봉과 가까운
+             볼리비아 남서부 포토시 주와 오루로 주에 자리잡고 있다.</td><td><img src="우유니.jpg" width="300px"></td>
+        </tr>
+        <tr>
+          <td>페루 :<br>마추픽추</td><td>마추 픽추(스페인어: machu picchu, 문화어: 마츄 삐끄츄)는
+            <br>페루에 있는 잉카 문명의 고대 요새 도시이다.</td><td><img src="마추픽추.jpg" width="300px"></td>
+        </tr>
+        <tr>
+          <td>쿠바 :<br>하바나</td><td>아바나(스페인어: La Habana 라 아바나[*]) 또는 하바나(영어: Havana)는 쿠바의 수도이다.
+            공식 이름은 산 크리스토발 데 라 아바나(San Cristóbal de La Habana)이다.
+            인구는 210만명이다.</td><td><img src="하바나.jpg" width="300px"></td>
+        </tr>
+      </tbody>
+      </table>
+
     </p>
   </div>
 </div>

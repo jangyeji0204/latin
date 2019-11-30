@@ -1,7 +1,6 @@
 <style>
 body{
   margin:0;
-  font-family: 'Gaegu', cursive;
   font-family: 'Jomolhari', serif;
 }
 a{
@@ -9,7 +8,7 @@ a{
   text-decoration: none;
 }
 h1{
-  font-family: 'Gaegu', cursive;
+  font-family: 'Jomolhari', serif;
   font-size:45px;
   text-align: center;
   border-bottom:2px solid gray;
@@ -17,7 +16,6 @@ h1{
   padding:20px;
 }
 ol{
-  font-family: 'Gaegu', cursive;
   font-family: 'Jomolhari', serif;
   border-right:2px solid gray;
   width:200px;
@@ -36,6 +34,7 @@ ul{
 }
 #grid #article{
   padding-left:25px;
+  align: center;
 }
 @media(max-width:800px){
   #grid{
@@ -47,4 +46,5 @@ ul{
   h1{
     border-bottom:none;
 }
+ }
 </style>
